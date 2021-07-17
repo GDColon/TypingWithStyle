@@ -5,7 +5,7 @@ echo.
 rem Copying the paragraphs.txt file to the source directory. It will crash if we dont.
 copy /a "paragraphs.txt" "src/paragraphs.txt" >nul
 
-rem Build all of that java code to .class files. Since we dont build a .jar file here we dont need a manifest
+rem Build all of that java code to .class files
 cd src
 javac *
 
