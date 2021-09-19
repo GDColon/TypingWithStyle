@@ -2,23 +2,17 @@
 echo This requires a JDK. If you see a bunch of errors, that's why.
 echo.
 
-rem copying paragraphs
+rem Copying the paragraphs.txt file to the source directory. It will crash if we dont.
 copy /a "paragraphs.txt" "src/paragraphs.txt" >nul
 
-rem building
+rem Build all of that java code to .class files
 cd src
-javac Paragraph.java
-javac ParagraphCollection.java
-javac Typing.java
-javac TypingUser.java
+javac *
 
-rem running
+rem Running the program duh
 java Typing
 
-rem cleanup
-del Paragraph.class >nul
-del ParagraphCollection.class >nul
-del Typing.class >nul
-del TypingUser.class >nul
-timeout 1 /nobreak >nul
-del paragraphs.txt >nul
+rem This code go clean clean
+del *.class
+timeout 1 /nobreak > nul
+del paragraphs.txt > nul
